@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Without Media Queries</title>
+    <style>
+        /* Layout For Document */
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        /* Container Start */
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            color: white;
+            margin: 10px;
+        }
+        /* Header Div Start */
+        .header{
+            /* flex: 1; */
+            max-width: 100%;
+            background-color: black;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        .header h1{
+            margin-bottom: 20px;
+            color: rgb(52, 79, 235);
+        }
+        .header hr{
+            margin: 20px 0px;
+        }
+        .header h2{
+            margin-bottom: 15px;
+            color: rgb(52, 79, 235);
+        }
+        .images{
+            display: flex;
+            justify-content: space-between;
+        }
+        .innerimages {
+            display: inline;
+            height: auto;
+            max-width: 30%;
+            text-align: center;
+        }
+        .innerimages h4{
+            font-size: 1rem;
+        }
+        .innerimages p{
+            font-size: 0.8rem;
+        }
+        .moulana{
+            max-width: 60%;
+            height: auto;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        /* Header Div End */
+
+        /* Aside Div Start */
+        .aside{
+            max-width: 100%;
+            display: flex;
+            flex-direction: row;
+            background-color: #fff;
+            color: black;
+            margin: 0 auto;
+            padding: 10px;
+            align-items: start;
+            justify-content: center;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        .aside p{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 10px 0px;
+        }
+        .aside p img{
+            margin-right: 10px;
+            border-left: 2px solid black;
+            padding-left: 5px;
+        }
+        .aside h2{
+            margin: 0;
+            margin-bottom: 10px;
+            color: rgb(52, 79, 235);
+            display: block;
+            text-align: center;
+        }
+        /* Aside Div End */
+
+
+        /* Payment Div Start */
+        .payment{
+            flex: 1 1 100%; 
+            max-width: 100%;
+            display: inline-block;
+            flex-direction: row;
+            background-color: black; 
+            padding: 10px;
+            margin: 10px 0;
+            align-items: center;
+            margin-left: auto;
+            border-radius: 10px;
+            justify-content: space-between;
+            text-align: center;
+        }
+        .payment h2{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            color: rgb(52, 79, 235);
+        }
+        .payment span{
+            text-align: center;
+            border-left: 2px solid white;
+            padding-left: 5px;
+        }
+        .payment h2,span,button{
+            margin: 8px;
+        }
+        .payment .bold{
+            font-weight: bold;
+        }
+        .payment .btn{
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px;
+            padding: 8px 10px;
+            width: 100px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+        }
+        .payment .btn:hover{
+            color: green;
+            background-color: white;
+        }
+        /* Payment Div End */
+
+
+        /* AboutUs Div Start */
+        .aboutus{
+            flex: 1 1 100%;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            margin: 0 auto;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px;
+        }
+        .aboutus h2,p,a{
+            margin: 10px;
+        }
+        .aboutus h2{
+            color: rgb(52, 79, 235);
+        }
+        /* AboutUs Div End */
+
+
+        /* AboutCourse Div Start */
+        .aboutcourse{
+            display: flex;
+            flex-direction: row;
+            flex: 100%;
+            margin: 0px 10px;
+            color: #000;
+            background-color: #fff;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            border: 2px solid gray;
+        }
+        .aboutcourse h1{
+            color: rgb(52, 79, 235);
+        }
+        .text-div{
+            flex: 1 1 50%;
+            margin: 20px;
+        }
+        .text-div p{
+            font-size: 1vmax;
+        }
+        .li{
+            font-size: 1vmax;
+        }
+        a{
+            color: rgb(52, 79, 235);
+        }
+        /* AboutCourse Div End*/
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header Start -->
+        <div class="header">
+            <h1>About The Course</h1>
+            <p>Discover a one-of-a-kind learning experience tailored exclusively for Muslim healthcare professionals, scholars, pharmacists, chaplains, policy influencers, and organizations committed to elevating Muslim patient care and ethical practice for health professionals. Our course is a deep dive into the intricate crossroads of Islamic jurisprudence (Fiqh) and the ethical dimensions of medical prescription and medication dispensation.</p>
+            <hr>
+            <h2>Our Course Team</h2>
+            <div class="images">
+                
+                <div class="innerimages">
+                    <img src="moulana-removebg-preview.png" class="moulana" alt="">
+                <h4>Shaikh Dr. Rafiqat Rashid</h4>
+                <p>Academic Director, Al Balagh Academy</p>
+                </div>
+    
+                <div class="innerimages">
+                    <img src="moulana-removebg-preview.png" class="moulana" alt="">
+                <h4>Shaikh Dr. Rafiqat Rashid</h4>
+                <p>Academic Director, Al Balagh Academy</p>
+                </div>
+    
+              
+                <div class="innerimages">
+                    <img src="moulana-removebg-preview.png" class="moulana" alt="">
+                <h4>Shaikh Dr. Rafiqat Rashid</h4>
+                <p>Academic Director, Al Balagh Academy</p>
+                </div>
+
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Aside Start -->
+        <div class="aside">
+            <h2>At A Glance</h2>
+            <p><img src="icons8-web-32.png" alt="">16 Live Online Sessions</p>
+            <p><img src="icons8-time-32.png" alt="">Duration : 16 Weeks</p>
+            <p><img src="icons8-timesheet-32.png" alt="">Sundays, 5 PM - 6:30PM (London, UK)</p>
+            <p><img src="icons8-video-32.png" alt="">Video Recordings Available</p>
+            <p><img src="icons8-iphone-14-32.png" alt="">Access to Mobile App</p>
+            <p><img src="icons8-certificate-32.png" alt="">Certificate</p>
+            <p><img src="icons8-money-32.png" alt="">From £24.99/Month(For 4 Months)</p>
+            
+        </div>
+        <!-- Aside End -->
+
+
+        <!-- Payment Start -->
+        <div class="payment">
+            <h2>Enroll Now</h2>
+            <span>Starts on 21th January 2024</span>
+            <span class="bold">Course Fee:</span>
+            <span>Pay in Full: £199.99 £99.99</span>
+            <span>Pay in 4 Installments: £24.99 per month</span>
+            <span class="bold">Registration Deadline:</span>
+            <span>20th January 2024</span>
+            <button class="btn">Enroll Now</button>
+        </div>
+        <!-- Payment End -->
+
+
+        <!-- AboutUs Start -->
+        <div class="aboutus">
+            <h2>Al Balagh Scholarship</h2>
+            <p>Al Balagh Scholarship is available for learners who cannot afford the fee.</p>
+            <a href="#">Learn More and Apply</a>
+        </div>
+        <!-- AboutUs End -->
+
+
+        <!-- AboutCourse Start -->
+        <div class="aboutcourse"> 
+            <div class="text-div">
+                <h1>Course Overview</h1>
+                <p>Discover a one-of-a-kind learning experience tailored exclusively for Muslim healthcare professionals, scholars, pharmacists, chaplains, policy influencers, and organisations committed to elevating Muslim patient care and ethical practice for health professionals. Our course is a deep dive into the intricate crossroads of Islamic jurisprudence (Fiqh) and the ethical dimensions of medical prescription and medication dispensation.</p>
+                <a href="#">Expand To Read More ↓</a>
+            </div>
+        </div>
+
+    <div class="aboutcourse">
+
+        <div class="text-div">
+            <h1>Learning Objectives</h1>
+            <p><li class="li"><strong>Expert Instruction:</strong> The majority of this course will be personally taught by Shaykh Dr. Rafaqat Rashid himself, a renowned authority in Islamic jurisprudence related to Bioethics. Benefit from his decades of experience and expertise.</li> </p>
+            <p><li class="li"><strong>Comprehensive Coverage:</strong> Explore Fiqh from all four Sunni schools, ensuring a well-rounded understanding that caters to diverse perspectives within the Islamic tradition.</li></p>
+            <a href="#">Expand To Read More ↓</a>
+        </div>
+    </div>
+
+
+<div class="aboutcourse">     
+    <div class="text-div">
+        <h1>Learning Outcomes</h1>
+        <p><li class="li"><strong>Understanding Islamic Jurisprudence (Fiqh):</strong> Gain a solid understanding of the foundational concepts and principles of Fiqh as it relates to medication and prescribing in Islamic ethics.</li></p>
+        <p><li class="li"><strong>Recognition of Ḥalāl and Ḥarām Medications:</strong> Learn to differentiate between permissible (Ḥalāl) and impermissible (Ḥarām) medications, including understanding the criteria and sources of Islamic law used in making such determinations.</li></p>
+        <a href="#">Expand To Read More ↓</a>
+    </div>
+</div>
+
+
+</div>
+</body>
+</html>
